@@ -1,8 +1,9 @@
 import axios from 'axios'
+import { API_ENDPOINT } from './apiEndpoint';
 
 
 function getAuthors() {
-  return axios.get('https://994b-2001-690-2100-110-a403-ab89-7bb9-268b.ngrok.io/api/getAuthors')
+  return axios.get(API_ENDPOINT + '/api/getAuthors')
 }
 
 const AuthorAPI = {

@@ -36,6 +36,7 @@ import useWindowDimensions from '../../../utils/windowDimensions';
 import unknowQuestion from '../../../images/question.png'
 import SearchEngine from '../../../utils/SearchEngine';
 import KnowledgeAreaAPI from '../../../api/knowledgeArea';
+import { API_ENDPOINT } from '../../../api/apiEndpoint';
 
 const rowKey = 'id';
 
@@ -104,7 +105,7 @@ function ViewQuestions() {
                         <Image
                             borderRadius="10"
                             boxSize="110px"
-                            src={"/api/requestFile/" + rowData["image_path"].split("/")[1]}
+                            src={API_ENDPOINT + "/api/requestFile/" + rowData["image_path"].split("/")[1]}
                             fallbackSrc={unknowQuestion}
                             alt="Segun Adebayo"
                         />
@@ -120,7 +121,7 @@ function ViewQuestions() {
                         <Image
                             borderRadius="10"
                             boxSize="110px"
-                            src={"/api/requestFile/" + rowData["resolution_path"].split("/")[1]}
+                            src={API_ENDPOINT + "/api/requestFile/" + rowData["resolution_path"].split("/")[1]}
                             fallbackSrc={unknowQuestion}
                             alt="Segun Adebayo"
                         />

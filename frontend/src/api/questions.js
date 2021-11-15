@@ -1,12 +1,13 @@
 import axios from 'axios'
+import { API_ENDPOINT } from './apiEndpoint'
 
 
 function submitQuestion(formData) {
-    return axios.post('/api/submitQuestion', formData)
+    return axios.post(API_ENDPOINT + '/api/submitQuestion', formData)
 };
 
 function getQuestions() {
-    return axios.get('https://994b-2001-690-2100-110-a403-ab89-7bb9-268b.ngrok.io/api/getQuestions')
+    return axios.get(API_ENDPOINT + '/api/getQuestions')
 }
 
 const QuestionsAPI = {

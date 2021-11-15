@@ -11,6 +11,7 @@ import useWindowDimensions from '../../../utils/windowDimensions';
 import QuestionTableUtils from "../../../utils/questionTableUtils";
 import unknowQuestion from '../../../images/question.png'
 import MultipleChoice from "../../../components/MultipleChoice";
+import { API_ENDPOINT } from "../../../api/apiEndpoint";
 
 function QuestionOverview(props) {
     const { height, } = useWindowDimensions();
@@ -24,7 +25,7 @@ function QuestionOverview(props) {
                     <Image
                         borderRadius="10"
                         boxSize="150px"
-                        src={"/api/requestFile/" + props.question["image_path"].split("/")[1]}
+                        src={API_ENDPOINT + "/api/requestFile/" + props.question["image_path"].split("/")[1]}
                         fallbackSrc={unknowQuestion}
                         alt="Question image"
                     />
@@ -59,7 +60,7 @@ function QuestionOverview(props) {
                     <Image
                         borderRadius="10"
                         boxSize="150px"
-                        src={"/api/requestFile/" + props.question["resolution_path"].split("/")[1]}
+                        src={API_ENDPOINT + "/api/requestFile/" + props.question["resolution_path"].split("/")[1]}
                         fallbackSrc={unknowQuestion}
                         alt="Resolution image"
                     />
