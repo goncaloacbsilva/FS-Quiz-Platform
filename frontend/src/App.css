@@ -28,10 +28,13 @@
   color: #61dafb;
 }
 
+
 .jFanTw {
-  min-width: -webkit-fill-available!important;
+  max-width: 100% !important;
+  max-width: -webkit-fill-available !important;
+  min-width: -webkit-fill-available !important;
   min-width: 100% !important;
-  min-width: stretch;
+  min-width: stretch !important;
 }
 
 .kdsIVG {
@@ -44,7 +47,7 @@
 
 .iqUTNK {
   color: #ffffffcf;
-  font-size: 12px!important;
+  font-size: 14px!important;
 }
 
 .bbaILr {
@@ -57,13 +60,30 @@
 }
 
 .jUxMSn {
-  color: #ffffffeb!important;
-  font-size: 14px!important;
+  color: #959595eb !important;
+  font-size: 16px!important;
 }
 
 .sc-kDTinF {
   font-size: larger!important;
 }
+
+.kBFNfs {
+  padding-top: 6px!important;
+  height: 25px!important;
+}
+
+.cOPwn {
+  padding-top: 6px!important;
+  height: 25px!important;
+}
+
+.kBFNfs:focus {
+  background-color: #282d35!important;
+}
+
+
+
 
 @keyframes App-logo-spin {
   from {

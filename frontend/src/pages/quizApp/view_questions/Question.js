@@ -32,9 +32,9 @@ function QuestionOverview(props) {
                     :
                     null
                 }
-                <VStack alignItems="start">
+                <VStack alignItems="stretch" width="100%">
                     <Box borderRadius={5} borderWidth={1} borderColor="gray.600" overflowY="scroll" maxHeight={height * 0.2}>
-                        <Text fontWeight="medium" padding={2}>{props.question["content"]}</Text>
+                        <Text style={{'whiteSpace': 'pre-line'}} fontWeight="medium" padding={2}>{props.question["content"]}</Text>
                     </Box>
                     <HStack paddingTop={1}>
                         <Badges.StatusBadge size="0.9em" used={props.question["used"]} />
