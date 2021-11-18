@@ -1,5 +1,5 @@
 import { 
-    Flex, Heading, VStack, Text, Button, Container, useToast
+    Flex, Heading, VStack, Text, Container, //useToast
 } from "@chakra-ui/react"
 import useWindowDimensions from '../../../utils/windowDimensions';
 import Navigation from "../Navigation";
@@ -7,9 +7,9 @@ import AsyncBoard from "./QuestionsBoard";
 
 function CreateQuiz() {
     const dimensions = useWindowDimensions();
-    const toast = useToast()
+    //const toast = useToast()
 
-
+    /*
     function errorMsg(type, title, msg) {
         console.log("ERROR_MSG: " + msg)
         toast({
@@ -21,6 +21,7 @@ function CreateQuiz() {
             isClosable: true,
         })
     }
+    */
 
     return (
         <>

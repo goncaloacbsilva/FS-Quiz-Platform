@@ -1,4 +1,4 @@
-import { Flex, Heading, Button, Container, VStack, Text, Icon } from "@chakra-ui/react"
+import { Flex, Heading, Button, Container, VStack, Icon } from "@chakra-ui/react"
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import Navigation from "./Navigation";

@@ -1,29 +1,9 @@
 import { Component } from "react";
-import { Button } from "@chakra-ui/react"
+import { Button, Text } from "@chakra-ui/react"
 import Board from 'react-trello'
 import QuestionsAPI from "../../../api/questions";
 import KnowledgeAreaAPI from "../../../api/knowledgeArea";
 import QuestionTableUtils from "../../../utils/questionTableUtils";
-
-const initialDataStruct = {
-    lanes: [
-        {
-            id: 'lane1',
-            title: 'My quiz #1',
-            editLaneTitle: true,
-            label: '',
-            cards: []
-        },
-        {
-            id: 'lane2',
-            title: 'From questions database',
-            label: '',
-            cards: []
-        }
-    ]
-}
-  
-
 
 class AsyncBoard extends Component {
     state = {
@@ -48,7 +28,21 @@ class AsyncBoard extends Component {
                     id: question.id.toString(), 
                     title: question.knowledgeArea, 
                     description: question.content, 
-                    label: (QuestionTableUtils.checkMultipleChoice(question) ? "Multiple choice" : "Open answer") + " - Resolution Time: 1:30"
+                    label: "Resolution Time: 1:30",
+                    tags: [
+                        QuestionTableUtils.checkMultipleChoice(question) ?
+                        {
+                            bgcolor: 'rgba(154, 230, 180, 0.16)',
+                            color: 'var(--chakra-colors-green-200)',
+                            title: 'Multiple choice'
+                        }
+                        :
+                        {
+                            bgcolor: 'rgba(144, 205, 244, 0.16)',
+                            color: 'var(--chakra-colors-blue-200)',
+                            title: 'Open answer'
+                        }
+                    ]
                 })
             });
             this.setState({
@@ -104,6 +98,9 @@ class AsyncBoard extends Component {
                         "backgroundColor": "transparent",
                         "padding": 0,
                         "alignSelf": "center",
+                    }}
+                    components={{
+                        LaneFooter: function noRefCheck() { return <Text>Ola</Text> }
                     }}
                 />
                 <Button size="lg" colorScheme="blue" onClick={() => {
