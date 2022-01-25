@@ -18,7 +18,7 @@
 
 
 ## IMPORTANT NOTE
-This project was initially planned to be private-source and only targeted for FST Lisboa requirements, therefore it does not have any documentation available at the moment. This README and your *godlike* ReactJS/NodeJS knowledge are the only things that can save you.
+This project was initially planned to be private-source and only targeted for [FST Lisboa](https://www.fstlisboa.com) requirements, therefore it does not have any documentation available at the moment. This README and your *godlike* ReactJS/NodeJS knowledge are the only things that can save you.
 
 **YOU HAVE BEEN WARNED**
 ## Project Structure
