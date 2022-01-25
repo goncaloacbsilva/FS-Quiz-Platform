@@ -2,10 +2,10 @@ const Pool = require('pg').Pool
 const path = require('path');
 
 const pool = new Pool({
-  user: '<DB USER>',
-  host: '<DB HOST>',
-  database: '<DB NAME>',
-  password: '<DB PASSWORD HERE>',
+  user: '<DB_USER>',
+  host: '<DB_HOST>',
+  database: '<DB_NAME>',
+  password: '<DB_PASSWORD>',
 })
 
 const getKnowledgeAreas = (request, response) => {
