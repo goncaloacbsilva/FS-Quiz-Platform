@@ -1,5 +1,5 @@
 
-# FST Quiz Platform
+# Quiz Platform for Formula Student
 
 (Now it's an) Open Source tool for creating quizzes
 
