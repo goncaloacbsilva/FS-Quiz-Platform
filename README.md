@@ -1,91 +1,145 @@
-# FST Suite
+
+# FST Quiz Platform
+
+(Now it's an) Open Source tool for creating quizzes
 
 
 
-## Getting started
+## Made by
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- [@goncaloacbsilva](https://github.com/goncaloacbsilva)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## Add your files
+## Tech Stack
 
-- [ ] [Create](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+**Frontend:** React, Axios, Chakra-UI
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/projectofst/software-private-src/fst-suite.git
-git branch -M main
-git push -uf origin main
-```
+**Backend:** NodeJS, Express, Multer, Postgres
 
-## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/project/integrations/)
+## IMPORTANT NOTE
+This project was initially planned to be private-source and only targeted for FST Lisboa requirements, therefore it does not have any documentation available at the moment. This README and your *godlike* ReactJS/NodeJS knowledge are the only things that can save you.
 
-## Collaborate with your team
+**YOU HAVE BEEN WARNED**
+## Project Structure
 
-- [ ] [Invite team members and collaborators](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Automatically merge when pipeline succeeds](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+The project is organized in two main folders
+- **frontend** (self-explanatory)
+- **production**: Backend + Frontend production files (build directory)
 
-## Test and Deploy
+## Features
 
-Use the built-in continuous integration in GitLab.
+- **Questions Submission**
+    - Set knowledge area
+    - Set resolution dificulty
+    - Set resolution time
+    - Select answer template (Multiple Choice or Open Answer)
+    - Upload question image
+    - Upload resolution image
 
-- [ ] [Get started with GitLab CI/CD](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://docs.gitlab.com/ee/user/clusters/agent/)
+- **Questions Overview**
+    - Search question by content
+    - Filter questions by Team Department (or knowledge areas)
+    - View question current state and if it was reviewed
+    - View question in quiz mode along with its solution and resolution
+    - Add question to the current quiz
 
-***
+- **Quiz Creation**
+    - Set quiz name
+    - Reorder questions
+    - Remove question from the quiz
 
-# Editing this README
+- **Quiz Mode**
+    - Choose quiz from list
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://gitlab.com/-/experiment/new_project_readme_content:303e1d1db9deacf14b5ff492fef7932b?https://www.makeareadme.com/) for this template.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## "ENV" Variables
 
-## Name
-Choose a self-explaining name for your project.
+These variables should be at the .env file but for now you can modify the following lines
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+- **production/queries.js:5**
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+    This variables are related to the Quiz DB connection
+
+    `DB_USER`
+    `DB_HOST`
+    `DB_NAME`
+    `DB_PASSWORD`
+
+- **production/index.js:10**
+
+    Backend API port
+
+    `const port`
+
+- **frontend/src/api/apiEndpoint.js:1**
+
+    Backend API Endpoint
+
+    `API_ENDPOINT`
+
+----
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Make sure that you have `yarn` and `npm` installed (yes I can't decide myself when it comes to package managers) and then  just follow 3 Simple steps
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+```bash
+  git clone https://github.com/goncaloacbsilva/FST-Quiz-Platform-Frontend.git FST_Quiz
+  cd FST_Quiz
+  cd frontend && yarn && cd.. && cd production && npm install && cd ..
+```
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
 
+
+
+    
+## Run Locally
+
+Well this is the part where you struggle because:
+- 1st: Maybe you are not a FST team member and because of that you can't access our quiz database.
+- 2nd: You can try to create your own db but you'll still struggle because you don't have our db structure.
+You can always try to reverse enginner my database queries and create the structure from that.
+Or I'll maybe upload a db schema so you can import it
+
+After setting up the database connection open two terminals at the parent location and type:
+
+*Terminal 1*
+```bash
+  cd production && node index.js
+```
+
+*Terminal 2*
+```bash
+  cd frontend && yarn start
+```
+
+
+
+
+## Deployment
+
+To prepare the project for deployment we first compile the frontend part and then we move it to the production folder
+
+```bash
+  rm -rf production/client/build
+  cd frontend
+  yarn build
+  mv build/ ../production/client/
+```
+For running the final result execute this last command
+
+```bash
+  cd production
+  node index.js
+```
+
+**Important note:** Don't forget to change the `API_ENDPOINT` when deploying to somewhere else (not localhost)
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+YES! Contributions are really apreciated!
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Right now the main goal is to finish the game logic and abstract all the platform making it more customizable in order to be used by other teams or someone else.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-
+You can find more details about the goals at `goals.md`
