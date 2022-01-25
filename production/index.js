@@ -34,7 +34,7 @@ app.use(
 )
 
 app.use(cors(corsOptions));
-app.use(express.static(path.join(__dirname, 'client/build')));
+//app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/api/getQuestions', db.getQuestions)
 app.get('/api/getKnowledgeAreas', db.getKnowledgeAreas)
