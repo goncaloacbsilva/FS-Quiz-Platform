@@ -3,8 +3,6 @@
 
 (Now it's an) Open Source tool for creating quizzes
 
-
-
 ## Made by
 
 - [@goncaloacbsilva](https://github.com/goncaloacbsilva)
@@ -21,6 +19,11 @@
 This project was initially planned to be private-source and only targeted for [FST Lisboa](https://www.fstlisboa.com) requirements, therefore it does not have any documentation available at the moment. This README and your *godlike* ReactJS/NodeJS knowledge are the only things that can save you.
 
 **YOU HAVE BEEN WARNED**
+
+## Screenshots
+![Quiz Selection](https://github.com/goncaloacbsilva/FS-Quiz-Platform/blob/main/media/quiz_selection.jpg)
+![Question Overview](https://github.com/goncaloacbsilva/FS-Quiz-Platform/blob/main/media/questions_overview.jpg)
+
 ## Project Structure
 
 The project is organized in two main folders
