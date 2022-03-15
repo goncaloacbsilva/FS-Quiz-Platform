@@ -145,4 +145,4 @@ YES! Contributions are really apreciated!
 
 Right now the main goal is to finish the game logic and abstract all the platform making it more customizable in order to be used by other teams or someone else.
 
-You can find more details about the goals at `goals.md`
+More details will be available soon...
